@@ -14,6 +14,12 @@
 	},
 	"dependencies": {
 
-	    "imazzine-developer-kit": ""
+	    "imazzine-developer-kit": "",
+		"zz.environment": "",
+		"zz.routers": "",
+		"zz.app": "",
+		"zz.views": "",
+		"zz.controllers": "",
+		"zz.models": ""
 	}
 }
