@@ -1,0 +1,19 @@
+{
+	"name": "todomvc",
+	"version": "2016129.0.0",
+	"description": "todo application written with idk",
+	"author": {
+		"name": "Popkov Alexander",
+		"email": "popkov.aleksander@gmail.com"
+	},
+	"license": "Apache-2.0",
+    "homepage": "http://www.example.com",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/author/todomvc.git"
+	},
+	"dependencies": {
+
+	    "imazzine-developer-kit": ""
+	}
+}
