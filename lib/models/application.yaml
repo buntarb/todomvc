@@ -1,0 +1,60 @@
+NAMESPACE: 'todomvc.models.Application'
+
+REQUIRE:
+  -  'todomvc.models.Item'
+
+FIELDS:
+
+  input:
+
+    index: 0
+    type: zz.models.enums.FieldType.STRING
+    required: false
+
+  completeAll:
+
+    index: 1
+    type: zz.models.enums.FieldType.BOOLEAN
+    required: false
+
+  itemStorage:
+
+    index: 2
+    type: todomvc.models.Item
+    required: false
+
+  itemView:
+
+    index: 3
+    type: todomvc.models.Item
+    required: false
+
+  activeItemsNumber:
+
+    index: 4
+    type: zz.models.enums.FieldType.NUMBER
+    required: false
+
+  completedItemsNumber:
+
+    index: 5
+    type: zz.models.enums.FieldType.NUMBER
+    required: false
+
+  showAll:
+
+    index: 6
+    type: zz.models.enums.FieldType.BOOLEAN
+    required: false
+
+  showActive:
+
+    index: 7
+    type: zz.models.enums.FieldType.BOOLEAN
+    required: false
+
+  showCompleted:
+
+    index: 8
+    type: zz.models.enums.FieldType.BOOLEAN
+    required: false

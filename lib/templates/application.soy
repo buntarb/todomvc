@@ -1,0 +1,97 @@
+// Copyright 2016 Artem Lytvynov <buntarb@gmail.com>. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS-IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+/**
+ * @license Apache-2.0
+ * @copyright Artem Lytvynov <buntarb@gmail.com>
+ */
+{namespace todomvc.templates.application}
+
+/**
+ * @param key
+ * @param value
+ */
+{template .default}
+    <div
+        class="{css todolist-app}">
+        <div
+            class="{css input-wrapper}">
+            <div
+                class="{css complete-all}"
+                data-class="{$key.completeAll}:{css complete-all_true}"
+                data-action
+                data-complete-all="1">
+                {literal}&#10095;{/literal}
+            </div>
+            <input
+                class="{css input}"
+                data-input="{$key.input}"
+                placeholder="What needs to be done?"
+                autofocus>
+        </div>
+        <div
+            class="{css todolist-wrapper}"
+            data-model="{$key.itemView}"
+            data-view="item"
+            data-controller="item">
+        </div>
+        <div
+            class="{css todolist-state}">
+            <div
+                class="{css items-number}">
+                <span
+                    data-model="{$key.activeItemsNumber}">
+                    {$value.activeItemsNumber}
+                    {literal}&#160;{/literal}
+                </span>
+                <span>
+                    {if $value.activeItemsNumber == 1}
+                        item
+                    {else}
+                        items
+                    {/if}
+                    left
+                </span>
+            </div>
+            <div
+                class="{css filters}">
+                <a
+                    class="{css filter-all}"
+                    data-class="{$key.showAll}:{css show-filter}"
+                    href="/">
+                    All
+                </a>
+                <a
+                    class="{css filter-active}"
+                    data-class="{$key.showActive}:{css show-filter}"
+                    href="/active">
+                    Active
+                </a>
+                <a
+                    class="{css filter-completed}"
+                    data-class="{$key.showCompleted}:{css show-filter}"
+                    href="/completed">
+                    Completed
+                </a>
+            </div>
+            <div
+                class="{css clear-completed}"
+                data-class="{$key.completedItemsNumber}:{css show}"
+                data-action
+                data-clear-completed="1">
+                Clear completed
+            </div>
+        </div>
+    </div>
+{/template}

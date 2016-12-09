@@ -1,0 +1,79 @@
+/**
+* @fileoverview todomvc main stylesheets files.
+* @license Apache-2.0
+* @author popkov.aleksander@gmail.com (Popkov Alexander)
+*/
+
+// Importing styles from related modules.
+// Please, don't delete this import.
+
+
+ul.dataset {
+
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  li.item {
+
+    display: flex;
+    position: relative;
+    padding: 15px 60px 15px 15px;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #e6e6e6;
+    & div.complete-item {
+
+      display: flex;
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      border-radius: 15px;
+      border: 1px solid #e6e6e6;
+      cursor: pointer;
+      div {
+
+        margin: auto;
+        display: none;
+      }
+    }
+    & div.item-text {
+
+      font-size: 28px;
+    }
+    & div.remove-item {
+
+      display: flex;
+      position: absolute;
+      right: 10px;
+      top: 0;
+      bottom: 0;
+      & div {
+
+        margin: auto;
+        font-size: 30px;
+        color: #cc9a9a;
+        transition: color 0.2s ease-out;
+        cursor: pointer;
+        &:hover {
+
+          color: #cc4859;
+        }
+      }
+    }
+    &.completed {
+
+      & div.complete-item {
+
+        & div {
+
+          display: block;
+        }
+      }
+      & div.item-text {
+
+        color: #d9d9d9;
+        text-decoration: line-through;
+      }
+    }
+  }
+}
