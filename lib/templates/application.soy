@@ -53,14 +53,12 @@
                 <span
                     data-model="{$key.activeItemsNumber}">
                     {$value.activeItemsNumber}
-                    {literal}&#160;{/literal}
+                </span>
+                <span
+                    data-model="{$key.activeItemsPlural}">
+                    {$value.activeItemsPlural}
                 </span>
                 <span>
-                    {if $value.activeItemsNumber == 1}
-                        item
-                    {else}
-                        items
-                    {/if}
                     left
                 </span>
             </div>
@@ -68,28 +66,28 @@
                 class="{css filters}">
                 <a
                     class="{css filter-all}"
-                    data-class="{$key.showAll}:{css show-filter}"
+                    data-class="{$key.showAll}:{css selected}"
                     href="/">
                     All
                 </a>
                 <a
                     class="{css filter-active}"
-                    data-class="{$key.showActive}:{css show-filter}"
+                    data-class="{$key.showActive}:{css selected}"
                     href="/active">
                     Active
                 </a>
                 <a
                     class="{css filter-completed}"
-                    data-class="{$key.showCompleted}:{css show-filter}"
+                    data-class="{$key.showCompleted}:{css selected}"
                     href="/completed">
                     Completed
                 </a>
             </div>
             <div
-                class="{css clear-completed}"
+                class="{css remove-completed}"
                 data-class="{$key.completedItemsNumber}:{css show}"
                 data-action
-                data-clear-completed="1">
+                data-remove-completed="1">
                 Clear completed
             </div>
         </div>

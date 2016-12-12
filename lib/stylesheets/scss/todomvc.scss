@@ -45,12 +45,36 @@ body {
         color: #e6e6e6;
         -webkit-transform: rotate(90deg);
         transform: rotate(90deg);
+        cursor: pointer;
       }
       & input.input {
 
         font-size: 28px;
         width: calc(100% - 15px);
         border: none;
+      }
+    }
+    & div.todolist-state {
+
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+      color: #777;
+      & div.filters {
+
+        & a {
+
+          margin: 3px;
+          padding: 3px 7px;
+          text-decoration: none;
+          color: #777;
+          border: 1px solid transparent;
+          border-radius: 3px;
+          &.selected {
+
+            border-color: rgba(175, 47, 47, 0.2);
+          }
+        }
       }
     }
   }
